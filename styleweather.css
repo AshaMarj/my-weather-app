@@ -1,0 +1,15 @@
+body {
+  color: rgb(221, 31, 56);
+  background: bisque;
+  font-family: "Satisfy", cursive;
+}
+
+img {
+  width: 400px;
+  display: block;
+  border-radius: 10px;
+}
+
+form {
+  text-align: left;
+}
