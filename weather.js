@@ -26,6 +26,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -39,15 +40,14 @@ function search(event) {
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-  let iconElement = document.querySelector("#icon");
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 function displayFarenheitTemperature(event) {
   event.preventDefault();
-  let displayFarenheitTemperature = (0 * 9/5) + 32 = 32);
+  let displayFarenheitTemperature = (0 * 9) / 5 + 32;
   alert(farenheitTemperature);
-  let temperatureElement = document.querySelector("#temperature")
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
