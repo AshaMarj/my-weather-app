@@ -26,6 +26,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  icon.setAttribute("icon", `http://openweathermap.org/img/wn/10d@2x.png`);
 }
 
 function search(event) {
@@ -35,6 +36,7 @@ function search(event) {
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
+  let icon = document.querySelector("#icon");
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
