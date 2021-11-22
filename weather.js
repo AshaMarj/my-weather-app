@@ -26,11 +26,17 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+
+  let descriptionElement = document.querySelector("#description");
+  let windElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  windElement.innerHTML = Math.round(response.wind.speed);
 }
 
 function search(event) {

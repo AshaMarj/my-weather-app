@@ -13,3 +13,7 @@ img {
 form {
   text-align: left;
 }
+
+h4 {
+  text-transform: capitalize;
+}
