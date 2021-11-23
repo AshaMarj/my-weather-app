@@ -63,5 +63,5 @@ searchForm.addEventListener("submit", search);
 
 dateElement.innerHTML = `${days[day]} ${hours}:${minutes}`;
 
-let farenheitLink = document.querySelector("farenheit-link");
+let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", displayFarenheitTemperature);
