@@ -36,7 +36,7 @@ function displayWeatherCondition(response) {
   );
 
   descriptionElement.innerHTML = response.data.weather[0].description;
-  windElement.innerHTML = Math.round(response.wind.speed);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function search(event) {
