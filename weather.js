@@ -49,19 +49,8 @@ function search(event) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-function displayFarenheitTemperature(event) {
-  event.preventDefault();
-  let displayFarenheitTemperature = (0 * 9) / 5 + 32;
-  alert(farenheitTemperature);
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
 let searchForm = document.querySelector("#search-form");
 
 searchForm.addEventListener("submit", search);
 
 dateElement.innerHTML = `${days[day]} ${hours}:${minutes}`;
-
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", displayFarenheitTemperature);
