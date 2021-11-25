@@ -17,3 +17,7 @@ form {
 h4 {
   text-transform: capitalize;
 }
+
+.weather-forecast {
+  text-align: center;
+}
