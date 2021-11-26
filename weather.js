@@ -94,6 +94,7 @@ function displayWeatherCondition(response) {
 
   descriptionElement.innerHTML = response.data.weather[0].description;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  getForecast(response.data.coord);
 }
 
 function search(event) {
@@ -111,5 +112,3 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
 dateElement.innerHTML = `${days[day]} ${hours}:${minutes}`;
-
-getForecast(response.data.coord);
