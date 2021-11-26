@@ -21,6 +21,35 @@ let days = [
   "Sunday",
 ];
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="row">
+          <div class="col-2">
+            <div class="weather-forecast-date"> ${day} </div>
+            <div class="weather-forecast-temperature">
+
+              <span class="weather-forecast-temperature-max"> 79°</span>
+              
+             <span class="weather-forecast-temperature-min"> 49°</span>  
+            </div> 
+          </div>
+
+                </div>
+
+ `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -52,5 +81,7 @@ function search(event) {
 let searchForm = document.querySelector("#search-form");
 
 searchForm.addEventListener("submit", search);
+
+displayForecast();
 
 dateElement.innerHTML = `${days[day]} ${hours}:${minutes}`;
